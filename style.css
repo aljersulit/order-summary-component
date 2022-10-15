@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* default */
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*, * ::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1em;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+}
+
+/* main styling */
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 25.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.02rem 0.5rem var(--Desaturated-blue);
+}
+
+.card>img {
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    display: block;
+}
+
+.card>.info {
+    padding: 2rem 2.75rem;
+    text-align: center;
+}
+
+.info>h1 {
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.info>form legend {
+    color: var(--Desaturated-blue);
+    margin-bottom: 1rem;
+    font-size: 0.92em;
+}
+
+.info .product-container {
+    height: 5.5rem;
+    border-radius: 1rem;
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-container>img {
+    object-fit: contain;
+    display: inline-block;
+}
+
+.product-container>.plan {
+    display: flex;
+    gap: 1rem;
+}
+
+.plan>.plan-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.plan-details>div {
+    font-size: 0.9em;
+}
+
+.plan>.plan-details div:nth-child(2) {
+    color: var(--Desaturated-blue);
+}
+
+.product-container>.popup-btn {
+    display: inline-block;
+    font-size: 0.75em;
+    color: var(--Bright-blue);
+    background-color: var(--Very-pale-blue);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.product-container>.popup-btn:hover {
+    text-decoration: none;
+    color: hsl(245, 75%, 62%);
+}
+
+
+.btn {
+    display: block;
+}
+
+.proceed {
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.82em;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.02em;
+    padding: 1em 0;
+    border-radius: 0.75em;
+    background-color: var(--Bright-blue);
+    box-shadow: 0 0.75rem 0.5rem var(--Pale-blue);
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+}
+
+.proceed:hover {
+    background-color: hsl(245, 75%, 62%);
+}
+
+.cancel {
+    width: fit-content;
+    color: var(--Desaturated-blue);
+    margin: 2rem auto 0.7em auto;
+    font-size: 0.82em;
+    font-weight: 900;
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.cancel:hover {
+    color: inherit;
+}
+
+.attribution {
+    font-size: 0.69rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 80%;
+    }
+
+    main {
+        padding: 4rem 0;
+    }
+
+    .card>.info {
+        padding: 2rem 2rem;
+    }
+
+    .info>h1 {
+        font-size: 1.8em;
+    }
+
+    .info>form legend {
+        font-size: 1.2em;
+        padding: 0 0.9rem;
+        line-height: 1.5em;
+        margin-bottom: 2rem;
+    }
+
+    .plan-details>div {
+        font-size: 1.1em;
+    }
+
+    .product-container>.popup-btn {
+        font-size: 0.9em;
+    }
+
+    .proceed {
+        font-size: 1.1em;
+    }
+
+    .cancel {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 70%;
+    }
+}
